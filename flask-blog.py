@@ -4,7 +4,7 @@ from email.policy import default
 from importlib.resources import contents
 from flask_sqlalchemy import SQLAlchemy
 from forms import RegistrationForm,LoginForm
-from flask import Flask,render_template,url_for,flash,redirect
+from flask import Flask,render_template,url_for,flash,redirect,db
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] ='4db77598290f06523456cafce29ac3d9'
@@ -20,7 +20,7 @@ class User(db.Model):
     password = db.Column(db.String(60),nullable=False)
     posts = db.relationship('Post',backref='author',lazy = True)
     
-    def __rerp__(self):
+    def __repr__(self):
         return f"User('{self.username},',{self.email})','{self.image_file}')"
     
 class Post(db.Model):
@@ -28,22 +28,23 @@ class Post(db.Model):
       title = db.Column(db.String(255),nullable=False)
       date_posted = db.Column(db.DateTime, nullable=False,default=datetime.utcnow)
       content = db.Column(db.text,nullable=False)
+      user_id = db.Column(db.Integer,db.ForeignKey('user_id'),nullable=False)
       
       
-      def __rerp__(self):
+      def __repr__(self):
         return f"Post('{self.title},',{self.date_posted}')"
 
 
 posts = [
     {
-        'author': 'Corey Schafer',
+        'author': 'Elon Musk',
         'title': 'Blog posts 1',
-        'content':'First Post Content',
+        'content':"When something is important enough, you do it even if the odds are not in your favor.",
         'Date Posted': 'April 20th,2015'
     },
         {
         'author': 'Eddy Schoffieldr',
-        'title': 'Blog post 2',
+        'title': "Some people don't like change, but you need to embrace change if the alternative is disaster.",
         'content':'Second Post Content Post Content',
         'Date Posted': 'April 20th,2015'
     }
