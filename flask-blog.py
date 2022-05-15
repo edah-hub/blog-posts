@@ -1,5 +1,6 @@
 import email
 from datetime import datetime
+from email.policy import default
 from importlib.resources import contents
 from flask_sqlalchemy import SQLAlchemy
 from forms import RegistrationForm,LoginForm
@@ -17,6 +18,7 @@ class User(db.Model):
     email = db.Column(db.String(255),unique=True,nullable=False)
     image_file = db.Column(db.String(255),nullable=False,default='default.jpeg')
     password = db.Column(db.String(60),nullable=False)
+    posts = db.relationship('Post',backref='author',lazy = True)
     
     def __rerp__(self):
         return f"User('{self.username},',{self.email})','{self.image_file}')"
@@ -24,8 +26,12 @@ class User(db.Model):
 class Post(db.Model):
       id = db.Column(db.Integer, primary_key=True)
       title = db.Column(db.String(255),nullable=False)
-      date_posted = db.Column(db.DateTime, nullable=False,)
-
+      date_posted = db.Column(db.DateTime, nullable=False,default=datetime.utcnow)
+      content = db.Column(db.text,nullable=False)
+      
+      
+      def __rerp__(self):
+        return f"Post('{self.title},',{self.date_posted}')"
 
 
 posts = [
