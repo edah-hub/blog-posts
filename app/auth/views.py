@@ -1,9 +1,11 @@
+import os
 from flask import render_template, redirect, url_for, request, flash, abort
 from flask_login import current_user, current_user, logout_user, login_required, login_user
 from app.models import User, BlogPost, Comment
 from .forms import RegistrationForm, LoginForm
 from app import bcrypt, db
 from . import auth
+from PIL import Image
 
 
 @auth.route('/register', methods=['GET', 'POST'])

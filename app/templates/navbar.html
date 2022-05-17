@@ -1,0 +1,53 @@
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark  #212121 grey darken-4">
+  <a class="navbar-brand" href="{{ url_for('main.index')}}">Preety Honest</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('main.index') }}">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fa fa-facebook"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+      </li>
+      {% if current_user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('main.new_post') }}">Create Post</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('auth.register') }}">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('auth.login') }}">Log in</a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>

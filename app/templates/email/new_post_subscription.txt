@@ -1,0 +1,2 @@
+Hello {{user.username}}
+A new post has just been published. Log in to your account to view it an interact with other users.

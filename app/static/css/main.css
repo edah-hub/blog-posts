@@ -1,0 +1,168 @@
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+.btn-primary{
+  background: #1ab188;
+  border: 0px;
+  border-radius: 0px;
+  margin-top: 20px;
+  border-left: 70px;
+  font-size: 19px;
+  width: 200px;
+}
+
+body{
+  background-color: rgba(158, 158, 158, 0.1) ;
+}
+
+.title{
+  font-weight: bold;
+}
+
+.sign-up-login-form{
+  width: 400px;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  background: url('../images/assets/bg.png');
+  overflow: hidden;
+}
+
+
+.sign-up-login-form{
+  margin-top: 100px;
+  font-family: 'Permanent Marker', cursive;
+  color: #fff;
+  font-size: 40px;
+}
+
+.comment{
+  color: black;
+}
+
+
+.sign-up-login-form{
+  font-family: 'Katibeh', cursive;
+}
+
+.new-post{
+  width: 600px;
+  margin-top: 50px;
+  padding: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  background: url('../images/assets/bg.png');
+  overflow: hidden;
+  font-family: 'Katibeh', cursive;
+}
+
+.image{
+  font-size: 25px;
+  color: white;
+}
+
+.sign-up-login-btn{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #487eb0;
+  color: #fff;
+  border-radius: 44px;
+  cursor: pointer;
+}
+
+.comment{
+  margin-top: 30px;
+}
+
+.content-form{
+  resize: none;
+  width: 700px;
+}
+
+.sign-up-login-btn:hover{
+  transform: scale(0.96);
+}
+
+.sign-up-login-form a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  transition: 0.8s;
+  display: block;
+}
+
+.text-muted{
+  font-size: 15px;
+}
+
+.form-control-label{
+  font-size: 25px;
+  color: white;
+}
+
+.form-check-label{
+  color: white;
+  font-size: 15px;
+}
+
+.fa{
+  margin: 10px;
+}
+
+.text-muted{
+  margin-top: 80px;
+}
+
+
+nav{
+  font-size: 20px;
+}
+
+
+.blogs{
+  font-family: 'Noto Serif', serif;
+}
+
+
+
+.page-footer{
+  background-color: black;
+  font-weight: bold;
+  color: white;
+  height: 20vh;
+  padding-top: 50px;
+  font-size: 40px;
+}
+
+
+.btn-primary:hover{
+  background:  #1ab188;
+}
+
+.blogs{
+  color: black;
+}
+
+.demo{
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.posts{
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+
+.title{
+  font-weight: bold;
+}
+
+.media{
+  margin-top: 20px;
