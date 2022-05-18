@@ -2,7 +2,7 @@
 
 Blog Post Application With Flask
 
-## user Information
+## Author Information
 
 <a href="https://github.com/edah-hub">Chepngetich Edah</a>
 
