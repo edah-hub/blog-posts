@@ -17,6 +17,7 @@ As a user, you will be able to:
   <ul>
   <li>View posts posted by other users.</li>
   <li>Sign up to the account</li>
+  <li>View a random quote</li>
   <li>Update or delete posts. </li>
   <li>Submit feedback or comment on other people's posts.</li>
   <li>Submit a post in any category</li>
